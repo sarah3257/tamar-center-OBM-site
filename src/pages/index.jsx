@@ -10,7 +10,7 @@ import Testimonials from "./Testimonials.jsx";
 
 import Contact from "./Contact.jsx";
 
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 const PAGES = {
     
@@ -60,7 +60,7 @@ function PagesContent() {
                 <Route path="/Testimonials" element={<Testimonials />} />
                 
                 <Route path="/Contact" element={<Contact />} />
-                
+                <Route path="*" element={<Home />} />
             </Routes>
         </Layout>
     );
